@@ -8,9 +8,9 @@
 :root {
     --main-white: whitesmoke;
     --gray: #545454;
-    --light-black: #333333;
-    --light-green: rgb(3, 189, 149);
-    --deep-green: rgb(21, 87, 80);
+    --light-black: #000000;
+    --light-green: #0045F4;
+    --deep-green: #003ACC;
 }
 
 
@@ -21,10 +21,9 @@ html {
 
 body {
     font-family: "Oswald", Helvetica, sans-serif;
-    color: var(--main-white);
     width: 100%;
     height: 100vh;
-    background: var(--light-black);
+    background: var(--main-white);
 }
 
 main {
@@ -47,7 +46,7 @@ h4 {
 }
 
 a {
-    color: var(--main-white);
+    color: black;
     text-decoration: none;
 }
 
@@ -85,20 +84,13 @@ ul > li {
 
 
 #main {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-flow: column nowrap;
-    margin: 0 auto;
-}
-
-#main-content {
     width: 90%;
     margin: 0 auto;
     height: 100%;
     display: flex;
     align-items: center;
 }
+
 
 .main-text {
     width: 50%;
@@ -146,20 +138,55 @@ ul > li {
 
 }
 
-#education {
+section {
     width: 90%;
     height: 100%;
+    padding: 5% 0 0;
     margin: 0 auto;
-    border: 1px solid red;
+    border-bottom: 1px solid var(--deep-green);
 }
 
 
-#projects {
-    width: 90%;
-    height: 100%;
-    padding-top: 5%;
-    margin: 0 auto;
+
+#projects h2 {
+    margin-bottom: 2%;
 }
+
+.projects-wrapper {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.project {
+    width: 24%;
+    height: 60%;
+    display: flex;
+    flex-direction: column;
+}
+
+.project-img {
+    width: 100%;
+    height: 40%;
+    background-color: #003ACC;
+}
+
+.project-name {
+    width: 100%;
+    height: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--deep-green);
+}
+
+.project-description {
+    width: 100%;
+    height: 50%;
+    background-color: antiquewhite;
+}
+
 
 
 

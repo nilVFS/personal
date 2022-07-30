@@ -1,7 +1,6 @@
 window.onwheel = e => {
     if(e.deltaY >= 0){
       document.querySelector("header").style.display = "none";
-      console.log('Scroll Down');
     } else {
         document.querySelector("header").style.display = "flex";
     }
@@ -18,4 +17,5 @@ function typeWriter() {
     }
   }
 
-document.body.addEventListener("load", typeWriter())
+document.body.addEventListener("load", typeWriter());
+
