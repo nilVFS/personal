@@ -8,7 +8,7 @@
 :root {
     --main-white: whitesmoke;
     --gray: #545454;
-    --light-black: #000000;
+    --light-black: #2f2d2d;
     --light-green: #0045F4;
     --deep-green: #003ACC;
 }
@@ -24,6 +24,8 @@ body {
     width: 100%;
     height: 100vh;
     background: var(--main-white);
+    color: var(--light-black);
+    scroll-behavior: smooth;
 }
 
 main {
@@ -33,6 +35,7 @@ main {
 
 h2 {
     font-size: 1.7rem;
+    color: var(--light-green);
 }
 
 h3 {
@@ -46,8 +49,12 @@ h4 {
 }
 
 a {
-    color: black;
+    color: var(--light-black);
     text-decoration: none;
+}
+
+a:active {
+    color: var(--deep-green);
 }
 
 .light-green {
@@ -113,7 +120,8 @@ ul > li {
 }
 
 .photo-wrapper {
-    width: 70%;
+    width: 30vw;
+    height: 30vw;
     background-color: var(--light-green);
     border-radius: 77% 23% 78% 22% / 25% 77% 23% 75%;
     overflow: hidden;
@@ -146,15 +154,13 @@ section {
     border-bottom: 1px solid var(--deep-green);
 }
 
-
-
-#projects h2 {
-    margin-bottom: 2%;
+#projects > h2 {
+    padding-bottom: 2%;
 }
 
 .projects-wrapper {
     width: 100%;
-    height: 100%;
+    height: 85%;
     display: flex;
     justify-content: space-between;
 }
@@ -164,12 +170,13 @@ section {
     height: 60%;
     display: flex;
     flex-direction: column;
+    border: 1px solid var(--deep-green);
 }
 
 .project-img {
     width: 100%;
     height: 40%;
-    background-color: #003ACC;
+    object-fit: cover;
 }
 
 .project-name {
@@ -184,15 +191,20 @@ section {
 .project-description {
     width: 100%;
     height: 50%;
-    background-color: antiquewhite;
+    background-color: var(--light-black);
 }
 
 
 
 
 @media screen and (max-width: 768px) {
+    
+    body {
+        font-size: 90%;
+    }
 
     header {
+        width: 100%;
         align-items: center;
         justify-content: center;
     }
@@ -209,8 +221,12 @@ section {
         margin: 1em;
     }
 
+    section {
+        width: 99%;
+    }
 
-    #main-content {
+
+    #main {
         flex-direction: column;
     }
 
@@ -220,9 +236,26 @@ section {
     }
 
     .main-photo {
-        width: 100%;
-        height: 50%;
+        width: 60vw;
+        height: 80vw;
         order: -1;
         align-items: center;
     }
+
+    .projects-wrapper {
+        display: flex;
+        overflow: auto;
+        gap: 1em;
+    }
+
+    .project {
+        flex-shrink: 0;
+        width: 99%;
+        height: 80%;
+    }
+
+    .project-img {
+        object-fit: cover;
+    }
+
 }

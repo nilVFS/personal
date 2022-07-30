@@ -11,7 +11,7 @@ let i = 0;
 
 function typeWriter() {
     if (i < myName.length) {
-      document.querySelector(".name").innerHTML += myName.charAt(i);
+      document.querySelector(".name").textContent += myName.charAt(i);
       i++;
       setTimeout(typeWriter, 100);
     }
