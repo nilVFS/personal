@@ -8,11 +8,13 @@
 }
 
 :root {
-    --main-white: rgb(241, 241, 247);
+    --main-white: #F1F1F7;
+    --secondary-white: #F0F0F5;
     --gray: #717070;
-    --light-black: #2f2d2d;
-    --light-green: #0045F4;
-    --deep-green: #003ACC;
+    --light-black: #2D2D2D;
+    --light-blue: #0045F4;
+    --deep-blue: #003ACC;
+    --orange: #FF8000;
 }
 
 
@@ -37,7 +39,7 @@ main {
 
 h2 {
     font-size: 2rem;
-    color: var(--light-green);
+    color: var(--light-blue);
 }
 
 h3 {
@@ -50,11 +52,11 @@ a {
 }
 
 a:active {
-    color: var(--deep-green);
+    color: var(--deep-blue);
 }
 
-.light-green {
-    color: var(--light-green);
+.light-blue {
+    color: var(--light-blue);
 }
 
 /* HEADER */
@@ -126,7 +128,7 @@ ul > li {
     width: 30%;
     height: 3em;
     border-radius: .4em;
-    background-color: var(--deep-green);
+    background-color: var(--deep-blue);
     margin-bottom: 2em;
 }
 
@@ -137,39 +139,49 @@ ul > li {
 
 .socials {
     display: flex;
-    font-size: 1.2em;
+    font-size: 1.5em;
     gap: 1em;
 }
 
 .socials > li {
     margin: 0;
     position: relative;
+    cursor: pointer;
 }
 
 .fa-square-phone:hover {
     color: green;
 }
 
+.phone {
+    display: none;
+    position: absolute;
+    bottom: -150%;
+    left: 0%;
+}
+
+.fa-telegram:hover {
+    color: #0088cc;
+}
+
+.fa-square-whatsapp:hover {
+    color: #075e54;
+}
+
 .fa-envelope:hover {
     color: red;
 }
 
-.phone {
-    display: none;
-    position: absolute;
-    bottom: -100%;
-    left: 0%;
-}
 
 .email {
     display: none;
     position: absolute;
-    bottom: -100%;
-    left: 0%;
+    bottom: -150%;
+    left: -100%;
 }
 
 .fa-vk:hover {
-    color: var(--deep-green);
+    color: var(--deep-blue);
 }
 
 /* MAIN PHOTO */
@@ -186,7 +198,7 @@ ul > li {
 .photo-wrapper {
     width: 30vw;
     height: 30vw;
-    background-color: var(--light-green);
+    background-color: var(--light-blue);
     border-radius: 77% 23% 78% 22% / 25% 77% 23% 75%;
     overflow: hidden;
     animation: photoBorderMorph 10s linear 0s infinite alternate-reverse;
@@ -217,6 +229,7 @@ ul > li {
     flex-direction: column;
     gap: 1em;
 }
+
 .education-wrapper {
     width: 100%;
     height: 90%;
@@ -280,7 +293,7 @@ ul > li {
     left: -50%;
     width: 1em;
     height: 0.3em;
-    background-color: #2f2d2d;
+    background-color: var(--light-black);
 }
 
 .dot-2016 {
@@ -289,7 +302,7 @@ ul > li {
     left: -50%;
     width: 1em;
     height: 0.3em;
-    background-color: #2f2d2d;
+    background-color: var(--light-black);
 }
 
 .dot-2017 {
@@ -298,7 +311,7 @@ ul > li {
     left: -50%;
     width: 1em;
     height: 0.3em;
-    background-color: #2f2d2d;
+    background-color: var(--light-black);
 }
 
 .dot-2018 {
@@ -307,7 +320,7 @@ ul > li {
     left: -50%;
     width: 1em;
     height: 0.3em;
-    background-color: #2f2d2d;
+    background-color: var(--light-black);
 }
 
 .dot-2019 {
@@ -316,7 +329,7 @@ ul > li {
     left: -50%;
     width: 1em;
     height: 0.3em;
-    background-color: #2f2d2d;
+    background-color: var(--light-black);
 }
 
 .dot-2020 {
@@ -325,7 +338,7 @@ ul > li {
     left: -50%;
     width: 1em;
     height: 0.3em;
-    background-color: #2f2d2d;
+    background-color: var(--light-black);
 }
 
 .dot-2021 {
@@ -334,7 +347,7 @@ ul > li {
     left: -50%;
     width: 1em;
     height: 0.3em;
-    background-color: #2f2d2d;
+    background-color: var(--light-black);
 }
 
 .dot-2022 {
@@ -343,17 +356,47 @@ ul > li {
     left: -50%;
     width: 1em;
     height: 0.3em;
-    background-color: #2f2d2d;
+    background-color: var(--light-black);
 }
 
 .edu-content {
-    width: 90%;
+    width: 100%;
     height: 100%;
     margin-left: 2%;
     display: grid;
     grid-template-rows: repeat(12, 1fr);
-    grid-template-columns: repeat(2, 1rem) 1fr;
+    grid-template-columns:  1rem 1fr;
     row-gap: 1rem;
+}
+
+.edu-content article {
+    padding: 1rem;
+    position: relative;
+    padding-right: 10%;
+    height: 32%;
+    margin-top: 0.5%;
+    border-bottom: 1px solid var(--deep-blue);
+}
+
+.edu-content article:hover {
+    box-shadow: 0 0 1em var(--gray);
+}
+
+.btn {
+    width: 10%;
+    height: 100%;
+    background-color: #0045F4;
+    position: absolute;
+    right: 0%;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.fa-square-arrow-up-right {
+    font-size: 2rem;
+    color: var(--main-white);
 }
 
 .edu-content h2 {
@@ -361,62 +404,98 @@ ul > li {
 }
 
 .courses-header {
-    color: green;
+    color: var(--orange);
 }
 
 .edu-main {
     width: 100%;
     grid-row: 1 / 8;
-    grid-column: 3 / 4;
-    padding: 1%;
+    grid-column: 2 / 3;
+    padding: 1% 1% 0;
     border: none;
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: flex-end;
 }
 
 .courses-progress {
-    background-color: green;
+    background-color: var(--orange);
     grid-row: 4 / 8;
     grid-column: 1 / 2;
     width: 50%;
     justify-self: end;
+    z-index: 1;
 }
 
 .university-progress {
-    background-color: var(--light-green);
-    grid-row: 1 / 8;
+    background-color: var(--light-blue);
+    grid-row: 2 / 8;
     grid-column: 1 / 2;
+    position: relative;
+}
+
+.university-progress::after {
+    content: "";
+    position: absolute;
+    width: 2rem;
+    height: 0.7rem;
+    bottom: 0;
+    left: -100%;
+    background-color: var(--light-blue);
+    z-index: -1;
 }
 
 .college-progress {
-    background-color: var(--light-green);
+    background-color: var(--light-blue);
     grid-column: 1 / 2;
     grid-row: 8 / 13;
+    position: relative;
+}
+
+.college-progress::before {
+    content: "";
+    position: absolute;
+    width: 2rem;
+    height: 0.7rem;
+    top: 0;
+    left: -100%;
+    background-color: var(--light-blue);
+    z-index: -1;
+}
+
+.college-progress::after {
+    content: "";
+    position: absolute;
+    width: 2rem;
+    height: 0.7rem;
+    bottom: 0;
+    left: -100%;
+    background-color: var(--light-blue);
+    z-index: -1;
 }
 
 .edu-college {
     width: 100%;
     grid-row: 8 / 13;
-    grid-column: 3 / 4;
+    grid-column: 2 / 3;
     padding: 1%;
     border: none;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
 }
 
+.edu-college article {
+    height: 45%;
+}
+
+
+/*PROJECTS*/
 
 section {
     width: 90%;
     height: 100%;
     padding: 5% 0 0;
     margin: 0 auto;
-    border-bottom: 1px solid var(--deep-green);
+    border-bottom: 1px solid var(--deep-blue);
 }
-
-
-/*PROJECTS*/
 
 #projects > h2 {
     padding-bottom: 2%;
@@ -435,7 +514,8 @@ section {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: #d8dadf;
+    background-color: var(--secondary-white);
+    border: 0.01rem solid black;
 }
 
 .project:hover {
@@ -465,7 +545,7 @@ section {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: var(--deep-green);
+    background-color: var(--deep-blue);
     color: var(--main-white);
     border-radius: .4em;
 }

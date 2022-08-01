@@ -7,7 +7,8 @@
         <link href="src/styles/reset.css" type="text/css" rel="stylesheet" />
         <link href="src/styles/styles.css" type="text/css" rel="stylesheet" />
         <script src="https://kit.fontawesome.com/cbc9c9e9bf.js" crossorigin="anonymous"></script>
-        <script defer src="src/scripts/main.js"></script>
+        <script src="src/scripts/main.js" async></script>
+        <script src="src/scripts/socials.js" async></script>
     </head>
     <body>
         <header>
@@ -23,8 +24,8 @@
         <main>
             <section id="main">
                 <div class="main-text">
-                    <h4>Приветствую, <span class="light-green">меня зовут</span></h4>
-                    <h3 class="light-green name"></h3>
+                    <h4>Привет, <span class="light-blue">меня зовут</span></h4>
+                    <h3 class="light-blue name"></h3>
                     <p>
                         Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestias odit aliquam corporis 
                         molestiae vitae voluptatibus voluptas dolore itaque laudantium est ex voluptates non velit 
@@ -32,10 +33,41 @@
                     </p>
                     <a href="#projects" class="primary-btn">Проекты</a>
                     <ul class="socials">
-                        <li><i class="fa-solid fa-square-phone"></i><span class="phone">000000000000</span></li>
-                        <li><i class="fa-solid fa-envelope"></i><span class="email">me@example.com</span></li>
-                        <li><a href="#"><i class="fa-brands fa-vk"></i></a></li>
-                        <li><a href="https://github.com/nilVFS" target="_blank"><i class="fa-brands fa-square-github"></i></a></li>
+
+                        <li>
+                            <i class="fa-solid fa-square-phone"></i>
+                            <a class="phone" title="Телефон" href="tel:+79251973399">79251973399</a>
+                        </li>
+
+                        <li>
+                            <a href="https://t.me/nilVFS">
+                                <i class="fa-brands fa-telegram"></i>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="https://wa.me/79251973399">
+                                <i class="fa-brands fa-square-whatsapp"></i>
+                            </a>
+                        </li>
+
+                        <li>
+                            <i class="fa-solid fa-envelope"></i>
+                            <a class="email" href="mailto:v.nizjev2013@ya.ru">v.nizjev2013@ya.ru</a>
+                        </li>
+
+                        <li>
+                            <a href="https://vk.com/nilvfs" target="_blank">
+                                <i class="fa-brands fa-vk"></i>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="https://github.com/nilVFS" target="_blank">
+                                <i class="fa-brands fa-square-github"></i>
+                            </a>
+                        </li>
+
                     </ul>
                 </div>
                 <div class="main-photo">
@@ -48,42 +80,51 @@
                 <h2>Образование</h2>
                 <div class="education-wrapper">
                     <div class="years">
-                        <div class="year"></div>
-                        <div class="year">Далее</div>
-                        <div class="year">2022</div>
-                        <div class="year">2021</div>
-                        <div class="year">2020</div>
-                        <div class="year">2019</div>
-                        <div class="year">2018</div>
-                        <div class="year">2017</div>
-                        <div class="year">2016</div>
-                        <div class="year">2015</div>
+                        <span class="year"></span>
+                        <span class="year">Далее</span>
+                        <span class="year">2022</span>
+                        <span class="year">2020</span>
+                        <span class="year">2021</span>
+                        <span class="year">2019</span>
+                        <span class="year">2018</span>
+                        <span class="year">2017</span>
+                        <span class="year">2016</span>
+                        <span class="year">2015</span>
                     </div>
                     <div class="timeline">
-                        <div class="dot-2015"></div>
-                        <div class="dot-2016"></div>
-                        <div class="dot-2017"></div>
-                        <div class="dot-2018"></div>
-                        <div class="dot-2019"></div>
-                        <div class="dot-2020"></div>
-                        <div class="dot-2021"></div>
-                        <div class="dot-2022"></div>
+                        <span class="dot-2015"></span>
+                        <span class="dot-2016"></span>
+                        <span class="dot-2017"></span>
+                        <span class="dot-2018"></span>
+                        <span class="dot-2019"></span>
+                        <span class="dot-2020"></span>
+                        <span class="dot-2021"></span>
+                        <span class="dot-2022"></span>
                     </div>
                     <div class="edu-content">
                         <div class="university-progress"></div>
                         <div class="courses-progress"></div>
                         <section class="edu-main">
                             <article>
-                                <h2>Гжельский Государственный Университет</h2>
+                                <h2>Гжельский Государственный Университет <span>2024</span></h2>
                                 <h3>Специальность: 38.03.01 Экономика (Расчетно-экономическая деятельность хозяйствующих субъектов)</h3>
+                                <div class="btn">
+                                    <i class="fa-solid fa-square-arrow-up-right"></i>
+                                </div>
                             </article>
                             <article>
-                                <h2>Гжельский Государственный Университет</h2>
+                                <h2>Гжельский Государственный Университет <span>2024</span></h2>
                                 <h3>Специальность: 44.03.01 Педагогическое образование (Иностранный язык)</h3>
+                                <div class="btn">
+                                    <i class="fa-solid fa-square-arrow-up-right"></i>
+                                </div>
                             </article>
                             <article>
                                 <h2 class="courses-header">Курсы Codecademy</h2>
                                 <h3>Front-End Engineer Career Path</h3>
+                                <div class="btn">
+                                    <i class="fa-solid fa-square-arrow-up-right"></i>
+                                </div>
                             </article>
                         </section>
                         <div class="college-progress"></div>
@@ -91,6 +132,9 @@
                             <article>
                                 <h2>Колледж Гжельского Государственного Университета</h2>
                                 <h3>Специальность: 40.02.01 Право и организация социального обеспечения</h3>
+                                <div class="btn">
+                                    <i class="fa-solid fa-square-arrow-up-right"></i>
+                                </div>
                             </article>
                         </section>
                     </div>
