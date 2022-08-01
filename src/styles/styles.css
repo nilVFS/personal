@@ -1,13 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;700&display=swap');
+
 /* GLOBAL */
+
 * {
     box-sizing: border-box;
     outline: none;
 }
 
 :root {
-    --main-white: whitesmoke;
-    --gray: #545454;
+    --main-white: rgb(241, 241, 247);
+    --gray: #717070;
     --light-black: #2f2d2d;
     --light-green: #0045F4;
     --deep-green: #003ACC;
@@ -34,18 +36,12 @@ main {
 }
 
 h2 {
-    font-size: 1.7rem;
+    font-size: 2rem;
     color: var(--light-green);
 }
 
 h3 {
-    font-size: 3rem;
-    font-weight: 600;
-    line-height: 1.2em;
-}
-
-h4 {
-    font-size: 2rem;
+    font-size: 1.7rem;
 }
 
 a {
@@ -62,6 +58,7 @@ a:active {
 }
 
 /* HEADER */
+
 header {
     position: fixed;
     display: flex;
@@ -80,6 +77,7 @@ header h1 {
 }
 
 /* NAVIGATION */
+
 nav ul {
     display: flex;
 }
@@ -89,6 +87,7 @@ ul > li {
     font-size: 1.4em;
 }
 
+/* MAIN */
 
 #main {
     width: 90%;
@@ -98,7 +97,7 @@ ul > li {
     align-items: center;
 }
 
-
+/* MAIN CONTENT */
 .main-text {
     width: 50%;
     display: flex;
@@ -106,9 +105,74 @@ ul > li {
     word-wrap: nowrap;
 }
 
-.main-text > p {
-    font-size: 2rem;
+.main-text > h3 {
+    font-size: 2.5em;
 }
+
+.main-text > h4 {
+    font-size: 2em;
+}
+
+.main-text > p {
+    font-size: 1.5em;
+    margin-bottom: 1em;
+}
+
+.primary-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--main-white);
+    width: 30%;
+    height: 3em;
+    border-radius: .4em;
+    background-color: var(--deep-green);
+    margin-bottom: 2em;
+}
+
+.primary-btn:hover {
+    box-shadow: -.4rem -.4rem 1.2rem var(--gray);
+    transition: box-shadow 350ms linear 0.1s;
+}
+
+.socials {
+    display: flex;
+    font-size: 1.2em;
+    gap: 1em;
+}
+
+.socials > li {
+    margin: 0;
+    position: relative;
+}
+
+.fa-square-phone:hover {
+    color: green;
+}
+
+.fa-envelope:hover {
+    color: red;
+}
+
+.phone {
+    display: none;
+    position: absolute;
+    bottom: -100%;
+    left: 0%;
+}
+
+.email {
+    display: none;
+    position: absolute;
+    bottom: -100%;
+    left: 0%;
+}
+
+.fa-vk:hover {
+    color: var(--deep-green);
+}
+
+/* MAIN PHOTO */
 
 .main-photo {
     width: 50%;
@@ -146,6 +210,203 @@ ul > li {
 
 }
 
+/* EDUCATION */
+
+#education {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+.education-wrapper {
+    width: 100%;
+    height: 90%;
+    display: flex;
+}
+
+.years {
+    width: 5%;
+    height: 100%;
+    align-self: flex-end;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 1rem;
+    font-size: 2rem;
+}
+
+.year {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.timeline {
+    margin-left: 1rem;
+    width: 0.5rem;
+    height: 100%;
+    position: relative;
+    background-color: green;
+}
+
+.timeline::before {
+    content: "";
+    width: 2rem;
+    height: 2rem;
+    top: 0em;
+    left: -150%;
+    position: absolute;
+    background-color: green;
+    transform: rotate(-45deg);
+    z-index: -2;
+}
+
+.timeline::after {
+    content: "";
+    width: 5rem;
+    height: 3rem;
+    top: 1rem;
+    left: -250%;
+    position: absolute;
+    background-color: var(--main-white);
+    z-index: -1;
+}
+
+
+.dot-2015 {
+    position: absolute;
+    bottom: 10%;
+    left: -50%;
+    width: 1em;
+    height: 0.3em;
+    background-color: #2f2d2d;
+}
+
+.dot-2016 {
+    position: absolute;
+    bottom: 20%;
+    left: -50%;
+    width: 1em;
+    height: 0.3em;
+    background-color: #2f2d2d;
+}
+
+.dot-2017 {
+    position: absolute;
+    bottom: 30%;
+    left: -50%;
+    width: 1em;
+    height: 0.3em;
+    background-color: #2f2d2d;
+}
+
+.dot-2018 {
+    position: absolute;
+    bottom: 40%;
+    left: -50%;
+    width: 1em;
+    height: 0.3em;
+    background-color: #2f2d2d;
+}
+
+.dot-2019 {
+    position: absolute;
+    bottom: 50%;
+    left: -50%;
+    width: 1em;
+    height: 0.3em;
+    background-color: #2f2d2d;
+}
+
+.dot-2020 {
+    position: absolute;
+    bottom: 60%;
+    left: -50%;
+    width: 1em;
+    height: 0.3em;
+    background-color: #2f2d2d;
+}
+
+.dot-2021 {
+    position: absolute;
+    bottom: 70%;
+    left: -50%;
+    width: 1em;
+    height: 0.3em;
+    background-color: #2f2d2d;
+}
+
+.dot-2022 {
+    position: absolute;
+    bottom: 80%;
+    left: -50%;
+    width: 1em;
+    height: 0.3em;
+    background-color: #2f2d2d;
+}
+
+.edu-content {
+    width: 90%;
+    height: 100%;
+    margin-left: 2%;
+    display: grid;
+    grid-template-rows: repeat(12, 1fr);
+    grid-template-columns: repeat(2, 1rem) 1fr;
+    row-gap: 1rem;
+}
+
+.edu-content h2 {
+    margin-bottom: 0.5rem;
+}
+
+.courses-header {
+    color: green;
+}
+
+.edu-main {
+    width: 100%;
+    grid-row: 1 / 8;
+    grid-column: 3 / 4;
+    padding: 1%;
+    border: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.courses-progress {
+    background-color: green;
+    grid-row: 4 / 8;
+    grid-column: 1 / 2;
+    width: 50%;
+    justify-self: end;
+}
+
+.university-progress {
+    background-color: var(--light-green);
+    grid-row: 1 / 8;
+    grid-column: 1 / 2;
+}
+
+.college-progress {
+    background-color: var(--light-green);
+    grid-column: 1 / 2;
+    grid-row: 8 / 13;
+}
+
+.edu-college {
+    width: 100%;
+    grid-row: 8 / 13;
+    grid-column: 3 / 4;
+    padding: 1%;
+    border: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+
 section {
     width: 90%;
     height: 100%;
@@ -153,6 +414,9 @@ section {
     margin: 0 auto;
     border-bottom: 1px solid var(--deep-green);
 }
+
+
+/*PROJECTS*/
 
 #projects > h2 {
     padding-bottom: 2%;
@@ -167,11 +431,17 @@ section {
 
 .project {
     width: 24%;
-    height: 60%;
+    height: 55%;
     display: flex;
     flex-direction: column;
-    border: 1px solid var(--deep-green);
+    align-items: center;
+    background-color: #d8dadf;
 }
+
+.project:hover {
+    box-shadow: 0 0 .5rem var(--gray);
+}
+
 
 .project-img {
     width: 100%;
@@ -179,30 +449,33 @@ section {
     object-fit: cover;
 }
 
-.project-name {
+.project-description {
     width: 100%;
-    height: 10%;
+    height: 40%;
+    display: flex;
+    padding: 0 1em;
+    align-items: center;
+    font-size: 1.2em;
+}
+
+.project-link {
+    width: 40%;
+    height: 15%;
+    margin-bottom: 5%;
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: var(--deep-green);
-}
-
-.project-description {
-    width: 100%;
-    height: 50%;
-    background-color: var(--light-black);
+    color: var(--main-white);
+    border-radius: .4em;
 }
 
 
 
+/* MEDIA QUERY */
 
 @media screen and (max-width: 768px) {
     
-    body {
-        font-size: 90%;
-    }
-
     header {
         width: 100%;
         align-items: center;
@@ -259,3 +532,4 @@ section {
     }
 
 }
+

@@ -6,6 +6,7 @@
         <title>Владислав Низьев</title>
         <link href="src/styles/reset.css" type="text/css" rel="stylesheet" />
         <link href="src/styles/styles.css" type="text/css" rel="stylesheet" />
+        <script src="https://kit.fontawesome.com/cbc9c9e9bf.js" crossorigin="anonymous"></script>
         <script defer src="src/scripts/main.js"></script>
     </head>
     <body>
@@ -14,7 +15,7 @@
             <nav>
                 <ul>
                     <li><a href="#main">Главная</a></li>
-                    <li><a href="#about">Обо мне</a></li>
+                    <li><a href="#education">Образование</a></li>
                     <li><a href="#projects">Проекты</a></li>
                 </ul>
             </nav>
@@ -22,13 +23,20 @@
         <main>
             <section id="main">
                 <div class="main-text">
-                    <h4>Привет, <span class="light-green">меня зовут</span></h4>
+                    <h4>Приветствую, <span class="light-green">меня зовут</span></h4>
                     <h3 class="light-green name"></h3>
                     <p>
                         Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestias odit aliquam corporis 
                         molestiae vitae voluptatibus voluptas dolore itaque laudantium est ex voluptates non velit 
                         blanditiis ad et ipsam, suscipit totam!
                     </p>
+                    <a href="#projects" class="primary-btn">Проекты</a>
+                    <ul class="socials">
+                        <li><i class="fa-solid fa-square-phone"></i><span class="phone">000000000000</span></li>
+                        <li><i class="fa-solid fa-envelope"></i><span class="email">me@example.com</span></li>
+                        <li><a href="#"><i class="fa-brands fa-vk"></i></a></li>
+                        <li><a href="https://github.com/nilVFS" target="_blank"><i class="fa-brands fa-square-github"></i></a></li>
+                    </ul>
                 </div>
                 <div class="main-photo">
                     <div class="photo-wrapper">
@@ -36,37 +44,94 @@
                     </div>
                 </div>
             </section>
-            <section id="about">
-                <h2>Обо мне</h2>
+            <section id="education">
+                <h2>Образование</h2>
+                <div class="education-wrapper">
+                    <div class="years">
+                        <div class="year"></div>
+                        <div class="year">Далее</div>
+                        <div class="year">2022</div>
+                        <div class="year">2021</div>
+                        <div class="year">2020</div>
+                        <div class="year">2019</div>
+                        <div class="year">2018</div>
+                        <div class="year">2017</div>
+                        <div class="year">2016</div>
+                        <div class="year">2015</div>
+                    </div>
+                    <div class="timeline">
+                        <div class="dot-2015"></div>
+                        <div class="dot-2016"></div>
+                        <div class="dot-2017"></div>
+                        <div class="dot-2018"></div>
+                        <div class="dot-2019"></div>
+                        <div class="dot-2020"></div>
+                        <div class="dot-2021"></div>
+                        <div class="dot-2022"></div>
+                    </div>
+                    <div class="edu-content">
+                        <div class="university-progress"></div>
+                        <div class="courses-progress"></div>
+                        <section class="edu-main">
+                            <article>
+                                <h2>Гжельский Государственный Университет</h2>
+                                <h3>Специальность: 38.03.01 Экономика (Расчетно-экономическая деятельность хозяйствующих субъектов)</h3>
+                            </article>
+                            <article>
+                                <h2>Гжельский Государственный Университет</h2>
+                                <h3>Специальность: 44.03.01 Педагогическое образование (Иностранный язык)</h3>
+                            </article>
+                            <article>
+                                <h2 class="courses-header">Курсы Codecademy</h2>
+                                <h3>Front-End Engineer Career Path</h3>
+                            </article>
+                        </section>
+                        <div class="college-progress"></div>
+                        <section class="edu-college">
+                            <article>
+                                <h2>Колледж Гжельского Государственного Университета</h2>
+                                <h3>Специальность: 40.02.01 Право и организация социального обеспечения</h3>
+                            </article>
+                        </section>
+                    </div>
+                </div>
             </section>
             <section id="projects">
                 <h2>Проекты</h2>
                 <div class="projects-wrapper">
                     <div class="project">
                         <img class="project-img" src="src/images/bank-dash.jpeg" alt="bank dashboard app" />
-                        <p class="project-description"></p>
-                        <a class="project-name" href="https://nilvfs.github.io/finance/" target="_blank">
+                        <p class="project-description">
+                            Концепция личного кабинета финансового приложения/банка
+                        </p>
+                        <a class="project-link" href="https://nilvfs.github.io/finance/" target="_blank">
                             Открыть
                         </a>
                     </div>
                     <div class="project">
                         <img class="project-img" src="src/images/note-dash.jpeg" alt="note dashboard app" />
-                        <p class="project-description"></p>
-                        <a class="project-name" href="https://nilvfs.github.io/note-dashboard/" target="_blank">
+                        <p class="project-description">
+                            Концепция приложения заметок в стиле glassmorphism
+                        </p>
+                        <a class="project-link" href="https://nilvfs.github.io/note-dashboard/" target="_blank">
                             Открыть
                         </a>
                     </div>
                     <div class="project">
                         <img class="project-img" src="src/images/weather.jpeg" alt="weather app" />
-                        <p class="project-description"></p>
-                        <a class="project-name" href="https://nilvfs.github.io/weather/" target="_blank">
+                        <p class="project-description">
+                            Текущая погода в стиле neumorphism
+                        </p>
+                        <a class="project-link" href="https://nilvfs.github.io/weather/" target="_blank">
                             Открыть
                         </a>
                     </div>
                     <div class="project">
                         <img class="project-img" src="src/images/recruitment-form.jpeg" alt="institute recruitment form" />
-                        <p class="project-description"></p>
-                        <a class="project-name" href="https://nilvfs.github.io/Student-Recruitment-Form/" target="_blank">
+                        <p class="project-description">
+                            Форма (анкета) подачи документов в университет
+                        </p>
+                        <a class="project-link" href="https://nilvfs.github.io/Student-Recruitment-Form/" target="_blank">
                             Открыть
                         </a>
                     </div>
