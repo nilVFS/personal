@@ -30,6 +30,7 @@ body {
     background: var(--main-white);
     color: var(--light-black);
     scroll-behavior: smooth;
+    position: relative;
 }
 
 main {
@@ -207,6 +208,19 @@ ul > li {
 
 .photo-wrapper img {
     max-width: 100%;
+}
+
+
+@-webkit-keyframes photoBorderMorph {
+    
+    from {
+        border-radius: 77% 23% 78% 22% / 25% 77% 23% 75%;
+    }
+
+    to {
+        border-radius: 32% 68% 20% 80% / 70% 30% 70% 30%;
+    }
+
 }
 
 
@@ -394,6 +408,23 @@ ul > li {
     align-items: center;
 }
 
+.btn-front {
+    width: 10%;
+    height: 100%;
+    background-color: #0045F4;
+    position: absolute;
+    right: 0%;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.fa-square-xmark {
+    font-size: 2rem;
+    color: var(--main-white);
+}
+
 .fa-square-arrow-up-right {
     font-size: 2rem;
     color: var(--main-white);
@@ -526,7 +557,8 @@ section {
 .project-img {
     width: 100%;
     height: 40%;
-    object-fit: cover;
+    -o-object-fit: cover;
+       object-fit: cover;
 }
 
 .project-description {
@@ -548,6 +580,39 @@ section {
     background-color: var(--deep-blue);
     color: var(--main-white);
     border-radius: .4em;
+}
+
+.course-certificate {
+    display: block;
+    position: fixed;
+    z-index: 5;
+    width: 100vw;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.close-certificate {
+    width: 5rem;
+    height: 5rem;
+    margin-top: 2%;
+    align-self: flex-start;
+    color: var(--main-white);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 5rem;
+}
+
+.close-certificate:hover {
+    color: red;
 }
 
 
@@ -608,7 +673,8 @@ section {
     }
 
     .project-img {
-        object-fit: cover;
+        -o-object-fit: cover;
+           object-fit: cover;
     }
 
 }
