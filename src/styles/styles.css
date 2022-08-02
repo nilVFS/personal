@@ -14,7 +14,7 @@
     --light-black: #2D2D2D;
     --light-blue: #0045F4;
     --deep-blue: #003ACC;
-    --orange: #FF8000;
+    --orange: rgb(99, 1, 277);
 }
 
 
@@ -408,7 +408,7 @@ ul > li {
     align-items: center;
 }
 
-.btn-front {
+.btn-front, .btn-diploma {
     width: 10%;
     height: 100%;
     background-color: #0045F4;
@@ -456,6 +456,8 @@ ul > li {
     width: 50%;
     justify-self: end;
     z-index: 1;
+    border-left: 1px solid var(--main-white);
+    border-top: 1px solid var(--main-white);
 }
 
 .university-progress {
@@ -582,8 +584,8 @@ section {
     border-radius: .4em;
 }
 
-.course-certificate {
-    display: block;
+.overlay {
+    display: none;
     position: fixed;
     z-index: 5;
     width: 100vw;
@@ -591,11 +593,14 @@ section {
     top: 0;
     left: 0;
     background-color: rgba(0, 0, 0, 0.6);
-    -webkit-backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(10px);
-    display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.certificate-image {
+    width: 50%;
 }
 
 

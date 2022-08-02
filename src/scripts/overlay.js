@@ -1,10 +1,34 @@
 const frontCert = document.querySelector(".btn-front");
-const certificate = document.querySelector(".course-certificate");
+const diplimaCollege = document.querySelector(".btn-diploma");
+const overlay = document.querySelector(".overlay");
+const image = document.querySelector(".certificate-image");
+const images = {
+    certificate: {
+        src: "src/images/frontend.jpg",
+        alt: "certificate of completion"
+    },
+
+    diploma: {
+        src: "",
+        alt: ""
+    }
+}
 
 frontCert.addEventListener("click", () => {
-    certificate.style.display = "flex";
+    image.src = images.certificate.src;
+    image.alt = images.certificate.alt;
+    overlay.style.display = "flex";
+
 })
 
-certificate.addEventListener("click", () => {
-    certificate.style.display = "none";
+diplimaCollege.addEventListener("click", () => {
+    image.src = images.diploma.src;
+    image.alt = images.diploma.alt;
+    overlay.style.display = "flex";
+
 })
+
+overlay.addEventListener("click", () => {
+    overlay.style.display = "none";
+})
+
