@@ -409,15 +409,10 @@ ul > li {
 }
 
 .btn-front, .btn-diploma {
-    width: 10%;
-    height: 100%;
-    background-color: #0045F4;
-    position: absolute;
-    right: 0%;
-    top: 0;
     display: flex;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
 }
 
 .fa-square-xmark {
@@ -457,6 +452,20 @@ ul > li {
     justify-self: end;
     z-index: 1;
     border-left: 1px solid var(--main-white);
+    border-top: 1px solid var(--main-white);
+    position: relative;
+}
+
+.courses-progress::after {
+    content: "";
+    position: absolute;
+    width: 1.5em;
+    height: 0.3em;
+    bottom: 0;
+    left: -360%;
+    background-color: var(--orange);
+    z-index: 1;
+    border-right: 1px solid var(--orange);
     border-top: 1px solid var(--main-white);
 }
 
@@ -626,22 +635,20 @@ section {
 
 @media screen and (max-width: 768px) {
     
+    h2 {
+        font-size: 1.2rem;
+    }
+
+    h3 {
+        font-size: 1rem;
+    }
+
+    p {
+        font-size: 1rem;
+    }
+
     header {
-        width: 100%;
-        align-items: center;
-        justify-content: center;
-    }
-
-    header h1 {
         display: none;
-    }
-
-    ul {
-        justify-content: space-evenly;
-    }
-
-    ul > li {
-        margin: 1em;
     }
 
     section {
@@ -664,6 +671,56 @@ section {
         order: -1;
         align-items: center;
     }
+
+    #education {
+        justify-content: center;
+    }
+
+    .years, .timeline, .university-progress, .courses-progress, .college-progress {
+        display: none;
+    }
+
+    .education-wrapper {
+        height: 100%;
+    }
+
+    .edu-content {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+        margin: 0;
+        width: 100%;
+        gap: 0;
+    }
+
+    .edu-main {
+        width: 100%;
+        padding: 0;
+    }
+
+    .edu-main article {
+        width: 100%;
+        width: 100%;
+        padding-right: 21%;
+        padding-left: 0;
+    }
+
+    .edu-college {
+        width: 100%;
+        padding: 0;
+        height: 70%;
+    }
+
+    .edu-college article {
+        padding-left: 0;
+        padding-right: 21%;
+    }
+
+    .btn {
+        width: 20%;
+    }
+
 
     .projects-wrapper {
         display: flex;
