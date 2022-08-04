@@ -9,8 +9,8 @@ const images = {
     },
 
     diploma: {
-        src: "",
-        alt: ""
+        src: "src/images/lawyer-diploma.jpeg",
+        alt: "Диплом колледжа"
     }
 }
 
