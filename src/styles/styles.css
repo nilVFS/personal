@@ -680,14 +680,14 @@ section {
         display: none;
         position: absolute;
         right: 0;
-        background-color: #f1f1f1;
+        background-color: var(--main-white);
         min-width: 10rem;
-        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        box-shadow: 0px 0.5rem 1rem 0px rgba(0,0,0,0.2);
         z-index: 1;
     }
       
     .dropdown-content > li {
-        color: black;
+        color: var(--light-black);
         padding: 0.8rem 1rem;
         text-decoration: none;
         display: block;
