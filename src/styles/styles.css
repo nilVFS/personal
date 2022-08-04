@@ -671,7 +671,6 @@ section {
 }
 
 
-
 /* MEDIA QUERY */
 
 @media screen and (max-width: 768px) {
@@ -712,7 +711,7 @@ section {
 
     .mobile-header {
         display: block;
-        font-size: 2rem;
+        font-size: 1.5rem;
         position: relative;
     }
 
@@ -722,6 +721,7 @@ section {
         font-size: 2rem;
         border: none;
         cursor: pointer;
+        transform: rotate(0deg);
     }
 
     .dropdown {
@@ -747,7 +747,17 @@ section {
     }
       
     .show {
-        display:block;
+        display: block;
+    }
+
+    .transform {
+        transform: rotate(90deg);
+        animation: rotate 500ms ease 0s 1;
+    }
+
+    @keyframes rotate {
+        0% {transform: rotate(0deg);}
+        100% {transform: rotate(90deg);}
     }
 
     /* MAIN MOBILE */
