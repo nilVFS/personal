@@ -6,7 +6,8 @@ const email = document.querySelector(".email");
 
 function showPhone() {
     phoneIcon.addEventListener("click", () => {
-    
+      email.style.display = "none";
+
       if (phone.style.display === "none") {
         phone.style.display = "block";
       } else {
@@ -19,7 +20,8 @@ function showPhone() {
 
 function showEmail() {
     emailIcon.addEventListener("click", () => {
-    
+      phone.style.display = "none";
+
       if (email.style.display === "none") {
         email.style.display = "block";
       } else {

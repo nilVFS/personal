@@ -72,11 +72,16 @@ header {
     transform: translate(-50%, 0);
     width: 90%;
     height: 7%;
+    z-index: 5;
 }
 
 header h1 {
     font-size: 2rem;
     font-weight: 800;
+}
+
+.mobile-header {
+    display: none;
 }
 
 /* NAVIGATION */
@@ -85,7 +90,7 @@ nav ul {
     display: flex;
 }
 
-ul > li {
+.desktop-navigation ul > li {
     margin-left: 2em;
     font-size: 1.4em;
 }
@@ -134,8 +139,8 @@ ul > li {
 }
 
 .primary-btn:hover {
-    box-shadow: -.4rem -.4rem 1.2rem var(--gray);
-    transition: box-shadow 350ms linear 0.1s;
+    box-shadow: -.1rem -.1rem .5rem var(--gray);
+    transition: box-shadow 200ms linear 0.1s;
 }
 
 .socials {
@@ -274,7 +279,7 @@ ul > li {
     width: 0.5rem;
     height: 100%;
     position: relative;
-    background-color: green;
+    background-color: #C4ED40;
 }
 
 .timeline::before {
@@ -284,7 +289,7 @@ ul > li {
     top: 0em;
     left: -150%;
     position: absolute;
-    background-color: green;
+    background-color: #C4ED40;
     transform: rotate(-45deg);
     z-index: -2;
 }
@@ -430,7 +435,7 @@ ul > li {
 }
 
 .courses-header {
-    color: var(--orange);
+    color: #EDAB28;
 }
 
 .edu-main {
@@ -445,7 +450,7 @@ ul > li {
 }
 
 .courses-progress {
-    background-color: var(--orange);
+    background-color: #EDAB28;
     grid-row: 4 / 8;
     grid-column: 1 / 2;
     width: 50%;
@@ -463,9 +468,9 @@ ul > li {
     height: 0.3em;
     bottom: 0;
     left: -360%;
-    background-color: var(--orange);
+    background-color: #EDAB28;
     z-index: 1;
-    border-right: 1px solid var(--orange);
+    border-right: 3px solid #EDAB28;
     border-top: 1px solid var(--main-white);
 }
 
@@ -613,23 +618,6 @@ section {
 }
 
 
-.close-certificate {
-    width: 5rem;
-    height: 5rem;
-    margin-top: 2%;
-    align-self: flex-start;
-    color: var(--main-white);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 5rem;
-}
-
-.close-certificate:hover {
-    color: red;
-}
-
-
 
 /* MEDIA QUERY */
 
@@ -648,35 +636,96 @@ section {
     }
 
     header {
+        justify-content: flex-end;
+        align-items: center;
+    }
+
+    header h1, header .desktop-navigation {
         display: none;
+    }
+
+    .mobile-header {
+        display: block;
+        font-size: 2rem;
+        position: relative;
+    }
+
+    .drop-btn {
+        background-color: transparent;
+        color: var(--light-black);
+        padding: 2rem;
+        font-size: 2rem;
+        border: none;
+        cursor: pointer;
+    }
+
+    .dropdown {
+        position: relative;
+        display: inline-block;
+    }
+      
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        right: 0;
+        background-color: #f1f1f1;
+        min-width: 10rem;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+    }
+      
+    .dropdown-content > li {
+        color: black;
+        padding: 0.8rem 1rem;
+        text-decoration: none;
+        display: block;
+    }
+      
+    .show {
+        display:block;
     }
 
     section {
         width: 99%;
     }
 
+    body {
+        width: 98%;
+        margin: 0 auto;
+    }
+
 
     #main {
         flex-direction: column;
+        width: 100%;
+        margin-top: -7%;
     }
 
     .main-text {
         width: 100%;
-        height: 50%;
     }
 
     .main-photo {
         width: 60vw;
-        height: 80vw;
+        height: 40%;
         order: -1;
         align-items: center;
+    }
+
+    .photo-wrapper {
+        width: 60vw;
+        height: 60vw;
     }
 
     #education {
         justify-content: center;
     }
 
-    .years, .timeline, .university-progress, .courses-progress, .college-progress {
+    .years, 
+    .timeline, 
+    .university-progress, 
+    .courses-progress, 
+    .college-progress {
         display: none;
     }
 
@@ -739,5 +788,8 @@ section {
            object-fit: cover;
     }
 
+    .certificate-image {
+        width: 100%;
+    }
 }
 

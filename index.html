@@ -10,17 +10,28 @@
         <script src="src/scripts/main.js" async></script>
         <script src="src/scripts/socials.js" async></script>
         <script src="src/scripts/overlay.js" async></script>
+        <script src="src/scripts/dropdown.js" async></script>
     </head>
     <body>
         <header>
             <h1>Портфолио</h1>
-            <nav>
+            <nav class="desktop-navigation">
                 <ul>
                     <li><a href="#main">Главная</a></li>
                     <li><a href="#education">Образование</a></li>
                     <li><a href="#projects">Проекты</a></li>
                 </ul>
             </nav>
+            <div class="mobile-header">
+                <div class="dropdown">
+                    <button onclick="showDrop()" class="drop-btn"><i class="fa-solid fa-bars"></i></button>
+                        <ul id="dropdownList" class="dropdown-content">
+                            <li><a href="#main">Главная</a></li>
+                            <li><a href="#education">Образование</a></li>
+                            <li><a href="#projects">Проекты</a></li>
+                        </ul>
+                  </div>
+            </div>
         </header>
         <main>
             <section id="main">
