@@ -157,6 +157,7 @@ nav ul {
     margin: 0;
     position: relative;
     cursor: pointer;
+    font-size: 2rem;
 }
 
 .fa-square-phone:hover {
@@ -187,7 +188,7 @@ nav ul {
     display: none;
     position: absolute;
     bottom: -150%;
-    left: -100%;
+    left: -150%;
 }
 
 .fa-vk:hover {
@@ -780,6 +781,10 @@ section {
         width: 100%;
     }
 
+    .socials {
+        justify-content: space-between;
+    }
+
     .main-photo {
         width: 60vw;
         height: 40%;
@@ -790,6 +795,10 @@ section {
     .photo-wrapper {
         width: 60vw;
         height: 60vw;
+    }
+
+    .arrows-link {
+        display: none;
     }
 
     .arrows {
@@ -833,6 +842,10 @@ section {
         width: 100%;
         padding-right: 21%;
         padding-left: 0;
+    }
+
+    .courses-header {
+        color: var(--light-blue);
     }
 
     .edu-college {
