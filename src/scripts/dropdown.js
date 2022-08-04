@@ -14,3 +14,5 @@ window.onclick = function(e) {
       }
     }
 }
+
+document.querySelector(".drop-btn").addEventListener("click", showDrop)

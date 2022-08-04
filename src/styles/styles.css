@@ -622,7 +622,18 @@ section {
 /* MEDIA QUERY */
 
 @media screen and (max-width: 768px) {
+
+    /* GLOBAL MOBILE */
     
+    body {
+        width: 98%;
+        margin: 0 auto;
+    }
+
+    section {
+        width: 99%;
+    }
+
     h2 {
         font-size: 1.2rem;
     }
@@ -634,6 +645,8 @@ section {
     p {
         font-size: 1rem;
     }
+
+    /* HEADER MOBILE */
 
     header {
         justify-content: flex-end;
@@ -653,7 +666,6 @@ section {
     .drop-btn {
         background-color: transparent;
         color: var(--light-black);
-        padding: 2rem;
         font-size: 2rem;
         border: none;
         cursor: pointer;
@@ -685,15 +697,7 @@ section {
         display:block;
     }
 
-    section {
-        width: 99%;
-    }
-
-    body {
-        width: 98%;
-        margin: 0 auto;
-    }
-
+    /* MAIN MOBILE */
 
     #main {
         flex-direction: column;
@@ -716,6 +720,8 @@ section {
         width: 60vw;
         height: 60vw;
     }
+
+    /* EDUCATION MOBILE */
 
     #education {
         justify-content: center;
@@ -770,6 +776,7 @@ section {
         width: 20%;
     }
 
+    /* PROJECTS MOBILE */
 
     .projects-wrapper {
         display: flex;
