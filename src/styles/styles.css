@@ -217,6 +217,14 @@ nav ul {
 
 .photo-wrapper img {
     max-width: 100%;
+    position: relative;
+}
+
+.profile-img {
+    position: absolute;
+    top: 32%;
+    left: 20%;
+    transform: rotate(5deg) scale(1.35);
 }
 
 
